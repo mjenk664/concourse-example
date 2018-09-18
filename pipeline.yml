@@ -1,0 +1,15 @@
+resources:
+- name: repo
+  type: git
+  source:
+    uri: https://github.com/marijenk/pcf-deployments.git
+    branch: master
+    username: ((git_repo_username))
+    password: ((git_repo_password))
+
+jobs:
+- name: job-pull-from-git
+  plan:
+  - get: repo
+  - task: pull-from-git
+    file: repo/tasks/task.yml

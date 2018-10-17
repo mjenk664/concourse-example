@@ -8,5 +8,8 @@ image_resource:
 inputs:
 - name: repo
 
+params:
+  creds:
+
 run:
   path: repo/scripts/script.sh

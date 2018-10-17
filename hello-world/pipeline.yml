@@ -1,0 +1,13 @@
+resources:
+- name: repo
+  type: git
+  source:
+    uri: https://github.com/marijenk/concourse-example.git
+    branch: master
+
+jobs:
+- name: job-pull-from-git
+  plan:
+  - get: repo
+  - task: pull-from-git
+    file: repo/hello-world/tasks/task.yml

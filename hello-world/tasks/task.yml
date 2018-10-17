@@ -12,4 +12,4 @@ params:
   creds:
 
 run:
-  path: repo/scripts/script.sh
+  path: repo/hello-world/scripts/script.sh

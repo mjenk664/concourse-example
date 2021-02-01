@@ -49,8 +49,8 @@ run:
   args:
   - "-c"
   - |
-    p-automator -v
-    set -eu
+    cat /var/version && echo ""
+    set -eux
     product_args=("")
     for product in ${PRODUCTS}
     do

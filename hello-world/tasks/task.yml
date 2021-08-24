@@ -9,7 +9,7 @@ inputs:
 - name: repo
 
 params:
-  creds:
+  SECRET:
 
 run:
   path: repo/hello-world/scripts/script.sh

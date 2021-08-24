@@ -2,7 +2,7 @@ resources:
 - name: repo
   type: git
   source:
-    uri: https://github.com/marijenk/concourse-example.git
+    uri: git@github.com:mjenk664/concourse-example.git
     branch: master
 
 jobs:

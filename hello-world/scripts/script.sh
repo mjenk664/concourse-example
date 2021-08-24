@@ -1,5 +1,5 @@
-#!/bin/bash
+#!/bin/sh
 
 set -x
 
-echo $creds
+echo "Hello, World! You have unlocked the $SECRET"

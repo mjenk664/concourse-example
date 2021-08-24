@@ -2,4 +2,4 @@
 
 set -x
 
-echo "Hello, World! You have unlocked the $SECRET"
+echo "Congratulations! This is the secret: $SECRET!"

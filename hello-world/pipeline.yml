@@ -4,10 +4,13 @@ resources:
   source:
     uri: git@github.com:mjenk664/concourse-example.git
     branch: master
+    private_key: ((git-private-key))
 
 jobs:
-- name: job-pull-from-git
+- name: show-conjur-secret
   plan:
   - get: repo
-  - task: pull-from-git
+  - task: output-secret
     file: repo/hello-world/tasks/task.yml
+    params:
+      SECRET: ((team-secret-variable))

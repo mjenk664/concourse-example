@@ -1,0 +1,8 @@
+- !delete
+  record: !variable concourse/main/my-conjur-variable
+
+- !delete
+  record: !variable concourse/main/opsman_username
+
+- !delete
+  record: !variable concourse/main/db/git-private-key

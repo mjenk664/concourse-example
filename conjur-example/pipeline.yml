@@ -15,5 +15,7 @@ jobs:
         - -c
         - |
           echo "The secret is: $SECRET"
+          echo "The Ops Manager username is: $OPSMAN_USERNAME"
       params:
-        SECRET: ((team-secret-variable))
+        SECRET: ((my-conjur-variable))
+        OPSMAN_USERNAME: ((opsman_username))

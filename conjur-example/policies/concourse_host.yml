@@ -1,0 +1,20 @@
+- !host
+  id: Concourse
+  annotations:
+    platform: concourse
+
+- !permit
+  role: !host Concourse
+  privilege: read, execute, create
+  resource: !host Concourse
+
+- !group
+  id: Concourse-admin-group
+
+- !grant
+  role: !group Concourse-admin-group
+  member: !host Concourse
+
+- !policy
+  id: Concourse-parent
+  owner: !group Concourse-admin-group

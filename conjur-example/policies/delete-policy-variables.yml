@@ -1,0 +1,14 @@
+- !delete
+  record: !variable Concourse-parent/main/my-conjur-variable
+
+- !delete
+  record: !variable Concourse-parent/main/opsman_username
+
+- !delete
+  record: !variable Concourse-parent/main/git-private-key
+
+- !delete
+  record: !policy main
+
+- !delete
+  record: !policy Concourse-parent

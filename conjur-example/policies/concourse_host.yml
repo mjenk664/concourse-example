@@ -1,8 +1,14 @@
+# Create a programmatic user called host/Concourse
+# - Upon loading this policy, it will generate an API key and output it to the console
+#   Ensure that the API key is securely stored
 - !host
   id: Concourse
   annotations:
     platform: concourse
 
+# Creates a sub-policy called "Concourse-parent" that grants ownership
+# to the Concourse-admin-group that the host/Concourse is a member of
+# with the below privileges
 - !permit
   role: !host Concourse
   privilege: read, execute, create
